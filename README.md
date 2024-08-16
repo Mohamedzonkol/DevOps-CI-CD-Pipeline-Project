@@ -7,7 +7,9 @@ Jenkins, Maven, Tomcat, Docker, Ansible, Terraform, and Azure Kubernetes Service
 
 1. **CI/CD Pipeline Using Git, Jenkins, Maven, Docker, and Ansible**
 2. **CI/CD Pipeline with Kubernetes Using Azure AKS, Jenkins, Terraform, and Ansible**
+Check out the demo video below:
 
+[![Project Demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://github.com/Mohamedzonkol/DevOps-CI-CD-Pipeline-Project/blob/main/Video/project-demo.mp4)
 ## Project Architecture
 
 The project uses multiple virtual machines on Azure for the CI/CD setup:
