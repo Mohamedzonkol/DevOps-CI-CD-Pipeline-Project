@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: javaapp-deployment
+  labels:
+    app: javaapp
+
+spec:
+  replicas: 3
+  selector:
+   matchLabels:
+     app: javaapp
+  template:
+    metadata:
+      labels:
+        app: javaapp
+    spec:
+      containers:
+        - name: javaapp
+          image: mohamedelsayed7/tomcat:v1
+          imagePullPolicy: Always
+          ports:
+           - containerPort: 8080
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1

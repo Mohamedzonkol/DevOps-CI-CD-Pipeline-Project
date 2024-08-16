@@ -1,0 +1,23 @@
+---
+- hosts: k8s
+  #become: true
+  user: root
+  
+  tasks:
+    - name: Check Kubernetes cluster info
+      command: kubectl cluster-info
+      register: kubectl_cluster_info
+      ignore_errors: yes
+
+    - name: Display Kubernetes cluster info
+      debug:
+        var: kubectl_cluster_info
+    
+    - name:  deploy javaapp on kubenettes
+      command: kubectl --kubeconfig /home/zonkol/.kube/config apply -f /home/zonkol/project/deployment-file.yml
+      register: kubectl_apply
+      ignore_errors: yes
+
+    - name: Display kubectl apply output
+      debug:
+        var: kubectl_apply

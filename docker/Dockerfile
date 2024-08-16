@@ -1,0 +1,17 @@
+FROM ubuntu:latest
+
+RUN apt-get install java -y
+
+RUN mkdir /opt/tomcat/
+
+WORKDIR /opt/tomcat
+
+ADD https://dlcdn.apache.org/tomcat/tomcat-9/v10.1.28/bin/apache-tomcat-10.1.28.tar.gz /opt/tomcat
+
+RUN tar xvfz apache*.tar.gz
+
+RUN mv apache-tomcat-10.1.28/* /opt/tomcat 
+
+EXPOSE 8080
+
+CMD ["/opt/tomcat/bin/catalina.sh", "run"]
