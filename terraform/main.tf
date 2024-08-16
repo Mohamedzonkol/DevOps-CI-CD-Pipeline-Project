@@ -55,15 +55,6 @@ resource "azurerm_virtual_machine" "jenkins_vm" {
     managed_disk_type = "Standard_LRS"
   }
 
-  os_profile {
-    computer_name  = "Jenkins-vm"
-    admin_username = "adminuser"
-    admin_password = "P@ssword1234!"
-  }
-
-  os_profile_linux_config {
-    disable_password_authentication = false
-  }
 
   source_image_reference {
     publisher = "Canonical"
