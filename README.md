@@ -2,7 +2,8 @@
 
 ## Project Overview
 
-This project demonstrates a complete CI/CD pipeline setup for a simple Java application using Git, Jenkins, Maven, Tomcat, Docker, Ansible, Terraform, and Azure Kubernetes Service (AKS). The project is divided into two sections:
+This project demonstrates a complete CI/CD pipeline setup for a simple Java application using Git, 
+Jenkins, Maven, Tomcat, Docker, Ansible, Terraform, and Azure Kubernetes Service (AKS). The project is divided into two sections:
 
 1. **CI/CD Pipeline Using Git, Jenkins, Maven, Docker, and Ansible**
 2. **CI/CD Pipeline with Kubernetes Using Azure AKS, Jenkins, Terraform, and Ansible**
